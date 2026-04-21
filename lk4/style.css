@@ -1,3 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --primary-color: #2F855A;      /* Hijau elegan */
+    --primary-hover: #276749;
+    --bg-color: #f8fafc;
+    --text-dark: #1e293b;
+    --text-muted: #64748b;
+    --card-bg: #ffffff;
+    --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --border-radius: 12px;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,176 +20,289 @@
 }
 
 body {
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #f4f7f6;
-    margin: 0;
-    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* NAVBAR */
+.navbar {
+    position: sticky;
+    top: 0;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: 15px 20px;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .nav-menu {
     list-style: none;
     display: flex;
-    gap: 15px;
-    padding: 20px;
-    background: white;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    gap: 30px;
 }
 
 .nav-menu li a {
     text-decoration: none;
-    background: #659764;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 25px;
-    font-weight: bold;
-    transition: 0.3s;
+    color: var(--text-dark);
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.3s ease;
 }
 
 .nav-menu li a:hover {
-    background: #74b9ff;
-    transform: scale(1.1);
+    color: var(--primary-color);
 }
 
-section {
-    padding: 40px;
-    max-width: 800px;
-    margin: auto;
-    background: white;
-    margin-top: 20px;
-    border-radius: 15px;
-}
-
-h1.logo {
-    padding-left: 20px;
-    color: #352d36;
-}
-
-.nav-menu {
-    display: flex;
-    list-style: none;
-    gap: 20px;
-}
-
-.nav-menu a {
-    color: rgb(23, 82, 5);
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.nav-menu a:hover {
-    text-decoration: underline;
-}
-
+/* HERO */
 .hero {
     text-align: center;
-    padding: 20px;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, rgba(47, 133, 90, 0.1) 0%, rgba(47, 133, 90, 0) 100%);
 }
 
 .hero img {
-    width: 150px;
-    height: 150px;
     border-radius: 50%;
     object-fit: cover;
+    box-shadow: var(--shadow-md);
+    margin-bottom: 20px;
+    border: 4px solid white;
+    width: 180px;
+    height: 180px;
+    transition: transform 0.3s ease;
 }
 
+.hero img:hover {
+    transform: scale(1.05);
+}
+
+.hero p {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+/* MAIN CONTAINERS */
 main {
-    max-width: 1000px;
-    margin: auto;
-    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
 }
 
 section {
-    margin-bottom: 30px;
-}
-
-article {
-    background: rgb(125, 154, 125);
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 60px;
+    padding: 40px;
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
 }
 
 h2 {
-    color: #342701;
-    margin-bottom: 10px;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+    position: relative;
+    padding-bottom: 10px;
 }
 
-h3 {
-    margin-bottom: 5px;
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: var(--primary-color);
+    border-radius: 2px;
 }
 
-ul {
+/* ARTICLES */
+article {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid #f1f5f9;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+
+article:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+article h3 {
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+    color: var(--text-dark);
+}
+
+article ul {
     margin-left: 20px;
+    color: var(--text-muted);
 }
 
+article ul li {
+    margin-bottom: 8px;
+}
+
+article p {
+    color: var(--text-muted);
+}
+
+/* GRIDS UNTUK RESPONSIVE (Laptop -> HP) */
 .skill-container,
 .project-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
+    /* Auto-fit akan otomatis menyesuaikan diri (kolom ganda di laptop, kolom tunggal di HP) */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
 }
 
-form {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
+/* FORM */
+#form form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
+    max-width: 600px;
 }
 
-input,
-select,
-textarea {
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+#form label {
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: -5px;
 }
 
-button {
-    background: #342701;
+#form input,
+#form select,
+#form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 1px solid #cbd5e1;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background: #f8fafc;
+}
+
+#form input:focus,
+#form select:focus,
+#form textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(47, 133, 90, 0.2);
+    background: #ffffff;
+}
+
+#form button {
+    background: var(--primary-color);
     color: white;
-    padding: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 15px;
     border: none;
-    border-radius: 5px;
-}
-
-button:hover {
-    background: #296927;
+    border-radius: 8px;
     cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    margin-top: 10px;
+    width: 100%;
+    max-width: 600px;
 }
 
+#form button:hover {
+    background: var(--primary-hover);
+    transform: translateY(-2px);
+}
+
+#hasilPendaftaran {
+    max-width: 600px;
+}
+
+/* FOOTER */
 footer {
     text-align: center;
-    padding: 15px;
-    background: #333;
-    color: white;
+    padding: 30px;
+    background: #fff;
+    color: var(--text-muted);
+    font-weight: 500;
+    margin-top: 40px;
+    border-top: 1px solid #f1f5f9;
 }
 
+/* MEDIA QUERIES KHUSUS TABLET & HP */
 @media (max-width: 768px) {
     .nav-container {
         flex-direction: column;
-        gap: 10px;
+        gap: 15px;
     }
-
     .nav-menu {
-        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
     }
-
-    .skill-container,
-    .project-container {
-        grid-template-columns: 1fr 1fr;
+    .hero {
+        padding: 50px 20px;
+    }
+    h2 {
+        font-size: 1.75rem;
+    }
+    section {
+        padding: 25px;
     }
 }
 
 @media (max-width: 480px) {
-
-    .skill-container,
-    .project-container {
-        grid-template-columns: 1fr;
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 10px;
     }
-
-    body {
-        font-size: 14px;
+    .nav-menu li {
+        width: 100%;
+        text-align: center;
+    }
+    .nav-menu li a {
+        display: block;
+        padding: 12px;
+        background: var(--bg-color);
+        border-radius: 8px;
+        border: 1px solid #e2e8f0;
+    }
+    .hero img {
+        width: 140px;
+        height: 140px;
+    }
+    h1.logo {
+        font-size: 1.25rem;
+    }
+    section {
+        padding: 20px 15px;
+    }
+    #form form, #hasilPendaftaran {
+        width: 100%;
     }
 }
