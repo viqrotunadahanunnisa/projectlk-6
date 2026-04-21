@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
 :root {
-    --primary-color: #2F855A;      /* Hijau elegan */
+    --primary-color: #2F855A;
+    /* Hijau elegan */
     --primary-hover: #276749;
     --bg-color: #f8fafc;
     --text-dark: #1e293b;
@@ -241,6 +242,74 @@ article p {
     max-width: 600px;
 }
 
+/* KONTAK & SOSIAL MEDIA */
+.kontak-card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.kontak-info p {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.kontak-info p i {
+    color: var(--primary-color);
+    font-size: 1.25rem;
+}
+
+.social-title {
+    margin-top: 15px;
+    font-size: 1.1rem !important;
+    color: var(--text-dark);
+}
+
+.social-media {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background: #f1f5f9;
+    color: var(--text-dark);
+    border-radius: 50%;
+    font-size: 1.3rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    color: white;
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.social-icon.instagram:hover {
+    background: #e1306c;
+}
+
+.social-icon.linkedin:hover {
+    background: #0a66c2;
+}
+
+.social-icon.github:hover {
+    background: #333333;
+}
+
+.social-icon.whatsapp:hover {
+    background: #25d366;
+}
+
 /* FOOTER */
 footer {
     text-align: center;
@@ -258,17 +327,21 @@ footer {
         flex-direction: column;
         gap: 15px;
     }
+
     .nav-menu {
         flex-wrap: wrap;
         justify-content: center;
         gap: 15px;
     }
+
     .hero {
         padding: 50px 20px;
     }
+
     h2 {
         font-size: 1.75rem;
     }
+
     section {
         padding: 25px;
     }
@@ -281,10 +354,12 @@ footer {
         width: 100%;
         gap: 10px;
     }
+
     .nav-menu li {
         width: 100%;
         text-align: center;
     }
+
     .nav-menu li a {
         display: block;
         padding: 12px;
@@ -292,17 +367,22 @@ footer {
         border-radius: 8px;
         border: 1px solid #e2e8f0;
     }
+
     .hero img {
         width: 140px;
         height: 140px;
     }
+
     h1.logo {
         font-size: 1.25rem;
     }
+
     section {
         padding: 20px 15px;
     }
-    #form form, #hasilPendaftaran {
+
+    #form form,
+    #hasilPendaftaran {
         width: 100%;
     }
 }
