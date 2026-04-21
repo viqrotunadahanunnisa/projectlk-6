@@ -1,16 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
 :root {
-    --primary-color: #2F855A;
-    /* Hijau elegan */
-    --primary-hover: #276749;
-    --bg-color: #f8fafc;
-    --text-dark: #1e293b;
+    --primary-color: #6082B6;
+    /* Biru soft / Dusty Blue lembut di mata */
+    --primary-hover: #4A6B9C;
+    --bg-color: #f4f7fb;
+    /* Putih kebiruan sangat lembut */
+    --text-dark: #2b3a4a;
+    /* Abu-abu tua navy, lebih nyaman dibaca */
     --text-muted: #64748b;
+    /* Abu-abu lembut */
     --card-bg: #ffffff;
-    --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.05), 0 1px 2px -1px rgb(0 0 0 / 0.05);
+    /* Bayangan dilembutkan */
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.05), 0 4px 6px -4px rgb(0 0 0 / 0.05);
     --border-radius: 12px;
 }
 
@@ -79,7 +83,7 @@ body {
 .hero {
     text-align: center;
     padding: 80px 20px;
-    background: linear-gradient(135deg, rgba(47, 133, 90, 0.1) 0%, rgba(47, 133, 90, 0) 100%);
+    background: linear-gradient(135deg, rgba(96, 130, 182, 0.15) 0%, rgba(96, 130, 182, 0) 100%);
 }
 
 .hero img {
@@ -214,7 +218,7 @@ article p {
 #form textarea:focus {
     outline: none;
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(47, 133, 90, 0.2);
+    box-shadow: 0 0 0 3px rgba(96, 130, 182, 0.2);
     background: #ffffff;
 }
 
