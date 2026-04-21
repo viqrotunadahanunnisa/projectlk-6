@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NadaHanunnisa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- HEADER / NAVBAR -->
+    <header class="navbar">
+        <div class="nav-container">
+
+            <!-- KIRI -->
+            <h1 class="logo">Hanun Nada</h1>
+
+            <!-- KANAN -->
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#tentang">Tentang</a></li>
+                    <li><a href="#skill">Skill</a></li>
+                    <li><a href="#proyek">Proyek</a></li>
+                    <li><a href="#kontak">Kontak</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <!-- HERO (biar foto tetap ada) -->
+    <section class="hero">
+        <img src="img/foto aku.jpeg" alt="Foto Aku" width="300" height="400">
+        <p>System Analys</p>
+    </section>
+
+    <!-- MAIN -->
+    <main>
+
+        <!-- Tentang -->
+        <section id="tentang">
+            <h2>Tentang Saya</h2>
+            <article>
+                <p>
+                    Saya adalah mahasiswa aktif ITSK RS dr. Soepraoen Malang Prodi S1 Informatika yang fokus pada System
+                    Analys.
+
+                </p>
+            </article>
+        </section>
+
+        <!-- Skill -->
+        <section id="skill">
+            <h2>Keahlian</h2>
+
+            <div class="skill-container">
+                <article>
+                    <h3>UI/UX</h3>
+                    <ul>
+                        <li>Wireframing (Figma)</li>
+                        <li>Prototyping</li>
+                        <li>Design System</li>
+                        <li>Interaction Design</li>
+                        <li>User Interface Design</li>
+                        <li>User Experience Design</li>
+                        <li>User Flow</li>
+                        <li>UX Research</li>
+                    </ul>
+                </article>
+
+                <article>
+                    <h3>Frontend Developer</h3>
+                    <ul>
+                        <li>HTML (dasar)</li>
+                        <li>CSS (Flexbox dan Grid)</li>
+                        <li>JavaScript (dasar)</li>
+                        <li>Responsive Design</li>
+                    </ul>
+                </article>
+
+                <article>
+                    <h3>Tools</h3>
+                    <ul>
+                        <li>Figma</li>
+                        <li>Visual Studio Code</li>
+                        <li>Canva</li>
+                        <li>GitHub</li>
+                        <li>GitLab</li>
+                    </ul>
+                </article>
+
+                <article>
+                    <h3>Programming</h3>
+                    <ul>
+                        <li>php</li>
+                        <li>JavaScript</li>
+                        <li>Python</li>
+                        <li>SQL</li>
+                    </ul>
+                </article>
+
+                <article>
+                    <h3>Tools Programming</h3>
+                    <ul>
+                        <li>Visual Studio Code</li>
+                        <li>Netbeans</li>
+                        <li>GitHub</li>
+                        <li>GitLab</li>
+                        <li>Laragon</li>
+                        <li>Xampp</li>
+                        <li>PHPMyAdmin</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <!-- Project -->
+        <section id="proyek">
+            <h2>Kesibukan</h2>
+
+
+            <div class="project-container">
+                <article>
+                    <h3>BEM ITSK RS dr. Soepraoen Malang</h3>
+                    <p>Sebagai Kementrian KOMINFO sejak 2 tahun terakhir</p>
+                </article>
+
+                <article>
+                    <h3>Jurnalistik</h3>
+                    <p>UKM Jurnalistik yang juga bekerjasama dengan HUMAS ITSK, yang juga sering turun untuk meliput
+                        kegiatan atau event event didalam kampus maupun diluar kampus.</p>
+                </article>
+
+                <article>
+                    <h3>Student Employee BKA</h3>
+                    <p>Mengelola publikasi informasi harian dan konten pada lama sosial media dan website Kemahasiswaan
+                        kampus </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Kontak -->
+        <section id="kontak">
+            <h2>Kontak</h2>
+            <article>
+                <p>Email: nadahanunnisa@gmail.com</p>
+                <p>No HP: 0853346789777</p>
+                <p>Instagram: @nadahanunnisa</p>
+            </article>
+        </section>
+
+        <!-- Form -->
+        <section id="form">
+            <h2>Form Pendaftaran</h2>
+
+            <form id="formPendaftaran">
+                <label>Nama Lengkap:</label>
+                <input type="text" id="nama" required>
+
+                <label>Email:</label>
+                <input type="email" id="email" required>
+
+                <label>Password:</label>
+                <input type="password" id="password" required>
+
+                <label>Jenis Kelamin:</label>
+                <select id="gender" required>
+                    <option value="laki">Laki-laki</option>
+                    <option value="perempuan">Perempuan</option>
+                </select>
+
+                <label>Alamat:</label>
+                <textarea id="alamat"></textarea>
+
+                <button type="submit">Daftar</button>
+            </form>
+            <div id="hasilPendaftaran"></div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 NadaHanunnisa</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+<!-- Update: Menambahkan form interaktif dari LK5 menggunakan Antigravity -->
+
+</html>
